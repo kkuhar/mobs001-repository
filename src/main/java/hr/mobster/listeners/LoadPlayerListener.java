@@ -18,6 +18,8 @@ public class LoadPlayerListener implements ActionListener {
 		try {
 			player.setRank(load.loadPlayer(player).getRank());
 			player.setMoney(load.loadPlayer(player).getMoney());
+			player.setHealth(load.loadPlayer(player).getHealth());
+			player.setDay(load.loadPlayer(player).getDay());
 		} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 		} catch (IOException e1) {

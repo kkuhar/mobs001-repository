@@ -14,8 +14,10 @@ public class PlayerIO {
 			FileOutputStream datoteka= new FileOutputStream(player.getName()+".mob");
 			ObjectOutputStream save= new ObjectOutputStream(datoteka);
   		save.writeUTF(player.getName());
-  		save.writeUTF("Associate");
-  		save.writeDouble(100.00);
+  		save.writeUTF(player.getRank());
+  		save.writeDouble(player.getMoney());
+  		save.writeInt(player.getHealth());
+  		save.writeInt(player.getDay());
   		save.close();		
 	}
 	
@@ -26,6 +28,8 @@ public class PlayerIO {
 	  p.setName(load.readUTF());
 	  p.setRank(load.readUTF());
 	  p.setMoney(load.readDouble());
+	  p.setHealth(load.readInt());
+	  p.setDay(load.readInt());
 		load.close();
 		return p;
 		

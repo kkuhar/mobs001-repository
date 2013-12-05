@@ -5,7 +5,27 @@ public class Player {
  private String name;
  private String rank;
  private double money;
- 
+ private int health;
+ private int day;
+ public int getHealth() {
+	return health;
+}
+
+
+public void setHealth(int health) {
+	this.health = health;
+}
+
+
+public int getDay() {
+	return day;
+}
+
+
+public void setDay(int day) {
+	this.day = day;
+}
+
  public Player(){
 	
  }

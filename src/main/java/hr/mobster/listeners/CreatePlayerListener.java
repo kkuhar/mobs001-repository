@@ -18,6 +18,8 @@ public class CreatePlayerListener implements ActionListener{
 		player.setName(MainMenu.getPlayerName());
 		player.setRank("Associate");
 		player.setMoney(100.0);
+		player.setHealth(100);
+		player.setDay(1);
 		try {			
 			save.savePlayer(player);
 		} catch (IOException e1) {
